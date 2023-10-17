@@ -51,9 +51,9 @@ defineProps({
           </div>
         </Link>
         <time
-          :datetime="post.created_at"
+          :datetime="post.published_at"
           class="block text-sm text-slate-500 dark:text-slate-300 sm:text-base"
-        >{{ post.created_at_for_muggles }}</time>
+        >{{ post.published_at_for_muggles }}</time>
       </article>
     </div>
   </Layout>

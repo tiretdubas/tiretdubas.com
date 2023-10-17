@@ -21,8 +21,8 @@ class PostResource extends JsonResource
             'slug' => $this->slug,
             'excerpt' => $this->excerpt,
             'body' => $this->when(isset($this->body), fn () => markdown_to_html($this->body)),
-            'created_at' => $this->created_at,
-            'created_at_for_muggles' => $this->created_at?->translatedFormat('d F Y'),
+            'published_at' => $this->published_at,
+            'published_at_for_muggles' => $this->published_at?->translatedFormat('d F Y'),
             'updated_at' => $this->updated_at,
         ];
     }

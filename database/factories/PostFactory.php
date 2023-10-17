@@ -23,6 +23,7 @@ class PostFactory extends Factory
             'excerpt' => fake()->sentences(4, true),
             'body' => fake()->text(500),
             'status' => collect(Status::names())->random(),
+            'published_at' => fake()->dateTimeBetween('-1 month'),
         ];
     }
 }

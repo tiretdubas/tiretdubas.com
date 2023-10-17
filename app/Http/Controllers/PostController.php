@@ -20,7 +20,7 @@ class PostController extends Controller
                     Information::select('value')->where('key', 'posts')->first()
                 ),
                 'posts' => PostResource::collection(
-                    Post::collection()->latest()->get()
+                    Post::collection()->latestPublished()->get()
                 ),
             ]
         );
