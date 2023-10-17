@@ -1,6 +1,6 @@
 name: Tests & Linting
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   tests-and-linting:
