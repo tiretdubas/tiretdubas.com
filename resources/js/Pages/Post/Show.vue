@@ -21,7 +21,7 @@ defineProps({
   >
     <meta
       property="article:published_time"
-      :content="post.created_at"
+      :content="post.published_at"
     >
     <meta
       property="article:modified_time"
@@ -42,9 +42,9 @@ defineProps({
       </Link>
       <article>
         <time
-          :datetime="post.created_at"
+          :datetime="post.published_at"
           class="block text-sm text-slate-500 dark:text-slate-300 sm:text-base"
-        >{{ post.created_at_for_muggles }}</time>
+        >{{ post.published_at_for_muggles }}</time>
         <Prose class="mt-2 md:mt-4">
           <h1>{{ post.title }}</h1>
           <div v-html="post.body" />

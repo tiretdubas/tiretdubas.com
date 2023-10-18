@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('information', function (Blueprint $table) {
-            $table->id();
-            $table->string('key');
-            $table->text('value');
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->timestamp('published_at')->nullable()->after('status');
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('information');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('published_at');
+        });
     }
 };

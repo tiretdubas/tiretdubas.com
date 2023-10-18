@@ -69,7 +69,7 @@ class PostResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->defaultSort('created_at', 'desc')
+            ->defaultSort('published_at', 'desc')
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->translateLabel()
@@ -80,7 +80,7 @@ class PostResource extends Resource
                     ->formatStateUsing(fn (string $state): string => __("Status.{$state}"))
                     ->color(fn (string $state): string => Status::color($state))
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                Tables\Columns\TextColumn::make('published_at')
                     ->translateLabel()
                     ->dateTime()
                     ->sortable(),
