@@ -18,6 +18,10 @@ class Post extends Model
         'status',
     ];
 
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
+
     public function getRouteKeyName(): string
     {
         return 'slug';
@@ -25,7 +29,12 @@ class Post extends Model
 
     public function scopeCollection(Builder $query): void
     {
-        $query->select('id', 'title', 'slug', 'excerpt', 'created_at');
+        $query->select('id', 'title', 'slug', 'excerpt', 'published_at');
+    }
+
+    public function scopeLatestPublished(Builder $query): void
+    {
+        $query->orderBy('published_at', 'desc');
     }
 
     protected static function booted(): void
@@ -34,6 +43,9 @@ class Post extends Model
 
         static::saving(function (Post $post) {
             $post->excerpt = markdown_to_excerpt($post->body);
+            if ($post->status === 'Published' && $post->published_at === null) {
+                $post->published_at = now();
+            }
         });
     }
 }

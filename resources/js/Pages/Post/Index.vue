@@ -1,10 +1,10 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
 import { ArrowLongRightIcon } from '@heroicons/vue/20/solid'
-import Head from '@/Shared/Head.vue'
+import Head from '@/Partials/Head.vue'
 import Layout from '@/Layouts/Main.vue'
-import Prose from '@/Shared/Prose.vue'
-import ClientTruthyValue from '@/Shared/Client/TruthyValue.vue'
+import Prose from '@/Partials/Prose.vue'
+import ClientTruthyValue from '@/Partials/Client/TruthyValue.vue'
 
 defineProps({
   catchblock: {
@@ -51,9 +51,9 @@ defineProps({
           </div>
         </Link>
         <time
-          :datetime="post.created_at"
+          :datetime="post.published_at"
           class="block text-sm text-slate-500 dark:text-slate-300 sm:text-base"
-        >{{ post.created_at_for_muggles }}</time>
+        >{{ post.published_at_for_muggles }}</time>
       </article>
     </div>
   </Layout>

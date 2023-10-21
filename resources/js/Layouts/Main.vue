@@ -8,6 +8,7 @@ import {
   TransitionChild
 } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
+import ThemeButton from '@/Partials/ThemeButton.vue'
 
 const route = inject('route')
 
@@ -26,7 +27,8 @@ function setIsOpen (value) {
 
 <template>
   <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-    <header class="flex justify-end">
+    <header class="flex items-center justify-between">
+      <ThemeButton />
       <button
         class="lg:hidden"
         @click="setIsOpen(true)"
@@ -93,8 +95,8 @@ function setIsOpen (value) {
         </Dialog>
       </TransitionRoot>
 
-      <nav>
-        <ul class="hidden space-x-10 text-lg lg:flex">
+      <nav class="hidden lg:block">
+        <ul class="space-x-10 text-lg lg:flex">
           <li
             v-for="menu_item in menuItems"
             :key="menu_item.text"

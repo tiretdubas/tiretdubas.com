@@ -1,7 +1,7 @@
 <script setup>
-import Head from '@/Shared/Head.vue'
+import Head from '@/Partials/Head.vue'
 import Layout from '@/Layouts/Main.vue'
-import Prose from '@/Shared/Prose.vue'
+import Prose from '@/Partials/Prose.vue'
 
 defineProps({
   about: {
