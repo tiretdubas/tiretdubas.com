@@ -6,7 +6,10 @@ import eslint from 'vite-plugin-eslint'
 export default defineConfig({
   plugins: [
     laravel({
-      input: ['resources/js/app.js', 'resources/css/app.css'],
+      input: [
+        'resources/js/app.js',
+        'resources/css/app.css'
+      ],
       ssr: 'resources/js/ssr.js',
       refresh: true
     }),

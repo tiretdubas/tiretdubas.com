@@ -1,10 +1,10 @@
 <script setup>
 import { CodeBracketSquareIcon } from '@heroicons/vue/24/outline'
 import { LinkIcon } from '@heroicons/vue/20/solid'
-import Head from '@/Shared/Head.vue'
+import Head from '@/Partials/Head.vue'
 import Layout from '@/Layouts/Main.vue'
-import ClientTruthyValue from '@/Shared/Client/TruthyValue.vue'
-import Prose from '@/Shared/Prose.vue'
+import ClientTruthyValue from '@/Partials/Client/TruthyValue.vue'
+import Prose from '@/Partials/Prose.vue'
 
 defineProps({
   catchblock: {
