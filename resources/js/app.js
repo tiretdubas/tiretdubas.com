@@ -1,4 +1,4 @@
-import '../css/app.css'
+import '@resources/css/app.css'
 
 import { createSSRApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'

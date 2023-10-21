@@ -1,9 +1,9 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
 import { ArrowLeftCircleIcon } from '@heroicons/vue/24/outline'
-import Head from '@/Shared/Head.vue'
+import Head from '@/Partials/Head.vue'
 import Layout from '@/Layouts/Main.vue'
-import Prose from '@/Shared/Prose.vue'
+import Prose from '@/Partials/Prose.vue'
 
 defineProps({
   post: {
