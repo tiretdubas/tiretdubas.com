@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/tiretdubas/tiretdubas.com/compare/v1.1.0...v1.2.0) (2023-10-25)
+
+
+### Features
+
+* Ajout de tests automatisés avec PHPUnit ([6ea0178](https://github.com/tiretdubas/tiretdubas.com/commit/6ea01783b0e22c84a9bb2be144f5cec3ed672e61))
+
 ## [1.1.0](https://github.com/tiretdubas/tiretdubas.com/compare/v1.0.0...v1.1.0) (2023-10-21)
 
 
