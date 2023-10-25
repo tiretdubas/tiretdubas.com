@@ -38,5 +38,5 @@ onMounted(() => {
         <SunIcon class="h-4 w-4 text-yellow-600" />
       </span>
     </span>
-</Switch>
+  </Switch>
 </template>

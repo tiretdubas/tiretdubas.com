@@ -23,7 +23,7 @@ class PostResource extends JsonResource
             'body' => $this->when(isset($this->body), fn () => markdown_to_html($this->body)),
             'published_at' => $this->published_at,
             'published_at_for_muggles' => $this->published_at?->translatedFormat('d F Y'),
-            'updated_at' => $this->updated_at,
+            'updated_at' => $this->when(isset($this->updated_at), $this->updated_at),
         ];
     }
 }

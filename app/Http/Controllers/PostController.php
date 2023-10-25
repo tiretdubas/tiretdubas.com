@@ -13,12 +13,12 @@ class PostController extends Controller
 {
     public function index(): Response
     {
+        $catchblock = Information::select('value')->where('key', 'posts')->first();
+
         return Inertia::render(
             'Post/Index',
             [
-                'catchblock' => new InformationResource(
-                    Information::select('value')->where('key', 'posts')->first()
-                ),
+                'catchblock' => $catchblock ? new InformationResource($catchblock) : null,
                 'posts' => PostResource::collection(
                     Post::collection()->latestPublished()->get()
                 ),
