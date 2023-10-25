@@ -16,12 +16,12 @@ class ProjectController extends Controller
      */
     public function __invoke(): Response
     {
+        $catchblock = Information::select('value')->where('key', 'projects')->first();
+
         return Inertia::render(
             'Project',
             [
-                'catchblock' => new InformationResource(
-                    Information::select('value')->where('key', 'projects')->first()
-                ),
+                'catchblock' => $catchblock ? new InformationResource($catchblock) : null,
                 'projects' => ProjectResource::collection(
                     Project::latest()->get()
                 ),
