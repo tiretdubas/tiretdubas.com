@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/tiretdubas/tiretdubas.com/compare/v1.2.0...v1.3.0) (2023-11-09)
+
+
+### Features
+
+* Ajout des instructions d'installation sur le README.md ([41431b8](https://github.com/tiretdubas/tiretdubas.com/commit/41431b8a61de12f9be2651acb5b5f59793e610f7))
+
 ## [1.2.0](https://github.com/tiretdubas/tiretdubas.com/compare/v1.1.0...v1.2.0) (2023-10-25)
 
 
