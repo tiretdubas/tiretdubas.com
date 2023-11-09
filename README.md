@@ -6,7 +6,7 @@ Cet exemple d'installation est réalisé à l'aide de [Laravel Sail](https://lar
 
 Pour commencer, on peut ajouter quelques alias à notre shell (Par exemple `~/.zshrc` pour Zsh) pour plus de simplicité par la suite :
 
-```zsh
+```shell
 alias sail="vendor/bin/sail"
 alias artisan="sail artisan"
 alias art="artisan"
@@ -14,7 +14,7 @@ alias art="artisan"
 
 On peut ensuite passer à l'installation :
 
-```zsh
+```shell
 git clone git@github.com:tiretdubas/tiretdubas.com.git
 cd tiretdubas.com
 composer i
